@@ -5,7 +5,8 @@ A lightweight Flask web app that lists every occupied TCP/UDP port on your Mac, 
 ## Getting started
 
 ```bash
-cd /Users/satyam/temp/porter
+git clone git@github.com:sdmcraft/port-monitor.git porter
+cd porter
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -16,3 +17,14 @@ Then open http://localhost:5000 in your browser. Click **Refresh** whenever you 
 
 
 > Tip: run the server with elevated privileges (e.g., `sudo -E python app.py`) if you need visibility into system processes you don't own.
+
+## Publishing to GitHub
+
+Already working from an initialized tree? Wire it to this repo:
+
+```bash
+git remote add origin git@github.com:sdmcraft/port-monitor.git
+git push -u origin main
+```
+
+Teammates can then follow the steps above (`git clone git@github.com:sdmcraft/port-monitor.git porter`, create virtualenv, run `python app.py`) to get started locally.
